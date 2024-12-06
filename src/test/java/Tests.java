@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import selenium.drivers.DriverSingleton;
 import selenium.pages.*;
+import selenium.pages.ShopPage;
 import selenium.utils.Constants;
 import selenium.utils.FrameworkProperties;
 
@@ -25,6 +26,7 @@ public class Tests {
         driver = DriverSingleton.getDriver();
         homePage = new HomePage();
         signInPage = new SignInPage();
+        shopPage = new ShopPage();
         checkoutPage = new CheckoutPage();
     }
 
@@ -35,6 +37,15 @@ public class Tests {
         homePage.clickSignIn();
         signInPage.logIn(frameworkProperties.getProperty(Constants.EMAIL),frameworkProperties.getProperty(Constants.PASSWORD));
         assertEquals(frameworkProperties.getProperty(Constants.USERNAME),homePage.getUserName());
+    }
+
+    @Test
+    public void testingAddingThingsToCart(){
+        driver.get(Constants.URL);
+        homePage.clickShopButton();
+        shopPage.goToSecondPage();
+        shopPage.addElementToCart();
+        assertEquals(Constants.CAR_QUANTITY, shopPage.getNumberOfProducts());
     }
 
     @AfterAll
