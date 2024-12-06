@@ -3,6 +3,7 @@ package selenium.drivers;
 import org.openqa.selenium.WebDriver;
 import selenium.drivers.strategies.DriverStrategy;
 import selenium.drivers.strategies.DriverStrategyImplementer;
+import selenium.utils.Constants;
 import selenium.utils.FrameworkProperties;
 
 import java.time.Duration;
@@ -13,7 +14,7 @@ public class DriverSingleton {
 
     private DriverSingleton(){
         FrameworkProperties frameworkProperties = new FrameworkProperties();
-        instantiate(frameworkProperties.getProperty("browser"));
+        instantiate(frameworkProperties.getProperty(Constants.BROWSER));
     }
 
     public WebDriver instantiate(String strategy){

@@ -24,7 +24,7 @@ public class Main {
         CheckoutPage checkoutPage = new CheckoutPage();
 
         homePage.clickSignIn();
-        signInPage.logIn(frameworkProperties.getProperty("email"), frameworkProperties.getProperty("password"));
+        signInPage.logIn(frameworkProperties.getProperty(Constants.EMAIL), frameworkProperties.getProperty(Constants.PASSWORD));
         if((homePage.getUserName().equals("Hello,Alina"))){
             System.out.println("Test Passed");
         } else{

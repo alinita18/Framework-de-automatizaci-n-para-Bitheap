@@ -7,9 +7,13 @@ public class Constants {
     public static final String PHANTOMJS = "PhantomJs";
     public static final String FIREFOX = "Firefox";
     public static final String CAR_QUANTITY = "1";
+    public static final String BROWSER = "browser";
+    public static final String USERNAME = "username";
+    public static final String URL = "https://bitheap.tech";
 
     public static final int TIMEOUT = 15;
-    public static final String EMAIL = "alinita18@gmail.com";
+    public static final String COMPLETE_ORDER = "Your order in My Store is complete";
+    public static final String EMAIL = "email";
 
-    public static final String PASSWORD = "QXNkMTIzKi4=";
+    public static final String PASSWORD = "password";
 }
