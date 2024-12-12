@@ -24,10 +24,17 @@ public class SignInPage {
     @FindBy(css = "body > div.xoo-el-container.xoo-el-style-popup.xoo-el-popup-active > div.xoo-el-modal > div > div > div.xoo-el-srcont > div > div > div.xoo-el-section.xoo-el-active > div > form > button")
     private WebElement signInButton;
 
+    @FindBy(css = "#menu-item-2332 > a")
+    private WebElement logout;
+
     public void logIn(String email, String password){
         signInEmail.sendKeys(email);
         this.password.sendKeys(Utils.decode64(password));
         signInButton.click();
+    }
+
+    public void logout(){
+        logout.click();
     }
 
 }

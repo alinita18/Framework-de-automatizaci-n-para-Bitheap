@@ -2,15 +2,18 @@ package selenium.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import selenium.drivers.DriverSingleton;
 import selenium.utils.Constants;
 
 import java.time.Duration;
+import java.util.List;
 
 public class CheckoutPage {
     private WebDriver driver;
@@ -24,6 +27,12 @@ public class CheckoutPage {
 
     @FindBy(id = "billing_last_name")
     private WebElement lastName;
+
+    @FindBy(css = "#billing_state_field > span > span > span.selection > span > span.select2-selection__arrow")
+    private WebElement countryButton;
+
+    @FindBy(id = "select2-billing_state-container")
+    private List<WebElement> country;
 
     @FindBy(id = "billing_address_1")
     private WebElement address;
@@ -47,6 +56,23 @@ public class CheckoutPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT));
         wait.until(ExpectedConditions.visibilityOf(address));
         address.sendKeys("abc");
+    }
+
+    public void providePersonalDetails(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT));
+        wait.until(ExpectedConditions.visibilityOf(firstName));
+        firstName.sendKeys("David");
+        lastName.sendKeys("Mourlot Matos");
+        countryButton.click();
+        for(WebElement option : country){
+            if(option.getText().equals("Uruguay")){
+                option.click();
+                break;
+            }
+        }
+        zipcode.sendKeys("1130");
+        townName.sendKeys("Punta del Este");
+
     }
 
     public String getTotalAmount(){
