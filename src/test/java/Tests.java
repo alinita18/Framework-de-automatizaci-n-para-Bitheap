@@ -12,6 +12,7 @@ import selenium.pages.*;
 import selenium.pages.ShopPage;
 import selenium.utils.Constants;
 import selenium.utils.FrameworkProperties;
+import selenium.utils.Utils;
 
 import java.time.Duration;
 
@@ -55,6 +56,7 @@ public class Tests {
         signInPage.logIn(name, password);
         Thread.sleep(1000);
         assertTrue(homePage.getUserName().contains("Hello"));
+        Utils.takeScreenshot();
         signInPage.logout();
     }
 

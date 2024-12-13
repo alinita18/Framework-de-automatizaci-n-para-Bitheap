@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import selenium.drivers.DriverSingleton;
 import selenium.utils.Constants;
+import selenium.utils.Utils;
 
 import javax.swing.*;
 import java.sql.Driver;
@@ -45,9 +46,10 @@ public class ShopPage {
         }
         if(numberOfProducts.getText().contains(Constants.CAR_QUANTITY))
             System.out.println("Cart has been updated");
-        else
+        else {
             System.out.println("Cart has not been updated");
-
+            Utils.takeScreenshot();
+        }
     }
 
     public void goToSecondPage(){

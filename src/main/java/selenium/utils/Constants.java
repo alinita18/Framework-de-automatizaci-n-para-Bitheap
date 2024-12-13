@@ -16,4 +16,7 @@ public class Constants {
     public static final String EMAIL = "email";
 
     public static final String PASSWORD = "password";
+    public static final String SCREENSHOTS_FOLDER = "screenshots\\";
+    public static final int SCREENSHOT_NAME_LENGTH = 4;
+    public static final String SCREENSHOT_EXTENSION = ".png";
 }
