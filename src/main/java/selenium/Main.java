@@ -1,4 +1,4 @@
-package selenium;
+/*package selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -6,14 +6,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import selenium.drivers.DriverSingleton;
 import selenium.pages.*;
 import selenium.utils.Constants;
-import selenium.utils.FrameworkProperties;
+import selenium.utils.*;
 
 import java.time.Duration;
 
 public class Main {
     public static void main(String[] args) throws Exception{
         FrameworkProperties frameworkProperties = new FrameworkProperties();
-        DriverSingleton driverSingleton = DriverSingleton.getInstance();
+        DriverSingleton driverSingleton = DriverSingleton.getInstance(frameworkProperties.getProperty(Constants.BROWSER));
         WebDriver driver = DriverSingleton.getDriver();
         driver.get("https://bitheap.tech");
 
@@ -47,4 +47,4 @@ public class Main {
         }
         DriverSingleton.closeObjectInstance();
     }
-}
+}*/

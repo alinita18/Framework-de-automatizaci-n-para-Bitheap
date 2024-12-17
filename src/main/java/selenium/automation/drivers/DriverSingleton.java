@@ -1,10 +1,9 @@
-package selenium.drivers;
+package selenium.automation.drivers;
 
 import org.openqa.selenium.WebDriver;
-import selenium.drivers.strategies.DriverStrategy;
-import selenium.drivers.strategies.DriverStrategyImplementer;
-import selenium.utils.Constants;
-import selenium.utils.FrameworkProperties;
+import selenium.automation.drivers.strategies.DriverStrategy;
+import selenium.automation.drivers.strategies.DriverStrategyImplementer;
+import selenium.automation.utils.FrameworkProperties;
 
 import java.time.Duration;
 
@@ -12,9 +11,9 @@ public class DriverSingleton {
     private static DriverSingleton instance = null;
     private static WebDriver driver;
 
-    private DriverSingleton(){
+    private DriverSingleton(String browser){
         FrameworkProperties frameworkProperties = new FrameworkProperties();
-        instantiate(frameworkProperties.getProperty(Constants.BROWSER));
+        instantiate(browser);
     }
 
     public WebDriver instantiate(String strategy){
@@ -26,9 +25,9 @@ public class DriverSingleton {
         return driver;
     }
 
-    public static DriverSingleton getInstance(){
+    public static DriverSingleton getInstance(String browser){
         if(instance == null){
-            instance = new DriverSingleton();
+            instance = new DriverSingleton(browser);
         }
         return instance;
     }

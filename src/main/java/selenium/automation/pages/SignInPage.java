@@ -1,11 +1,11 @@
-package selenium.pages;
+package selenium.automation.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import selenium.drivers.DriverSingleton;
+import selenium.automation.drivers.DriverSingleton;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import selenium.utils.Utils;
+import selenium.automation.utils.Utils;
 
 public class SignInPage {
     private WebDriver driver;
@@ -33,7 +33,7 @@ public class SignInPage {
         signInButton.click();
     }
 
-    public void logout(){
+   public void logout(){
         logout.click();
     }
 

@@ -1,6 +1,6 @@
-package selenium.drivers.strategies;
+package selenium.automation.drivers.strategies;
 
-import selenium.utils.Constants;
+import selenium.automation.utils.Constants;
 public class DriverStrategyImplementer {
     public static DriverStrategy chooseStrategy(String strategy) {
         switch (strategy) {

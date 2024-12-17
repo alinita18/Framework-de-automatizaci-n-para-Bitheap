@@ -1,4 +1,4 @@
-package selenium.pages;
+package selenium.automation.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,8 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import selenium.drivers.DriverSingleton;
-import selenium.utils.Constants;
+import selenium.automation.drivers.DriverSingleton;
+import selenium.automation.utils.Constants;
 
 import java.time.Duration;
 

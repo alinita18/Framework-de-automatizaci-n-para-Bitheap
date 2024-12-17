@@ -1,9 +1,9 @@
-package selenium.utils;
+package selenium.automation.utils;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.springframework.util.FileCopyUtils;
-import selenium.drivers.DriverSingleton;
+import selenium.automation.drivers.DriverSingleton;
 
 import java.io.File;
 import java.io.IOException;

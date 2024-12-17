@@ -1,4 +1,4 @@
-package selenium.utils;
+package selenium.automation.utils;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

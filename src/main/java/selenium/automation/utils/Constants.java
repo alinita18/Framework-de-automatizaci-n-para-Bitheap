@@ -1,4 +1,4 @@
-package selenium.utils;
+package selenium.automation.utils;
 
 public class Constants {
     public static final String PROP_FILE_NAME = "framework.properties";

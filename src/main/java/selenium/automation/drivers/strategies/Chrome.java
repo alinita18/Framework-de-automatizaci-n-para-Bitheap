@@ -1,4 +1,4 @@
-package selenium.drivers.strategies;
+package selenium.automation.drivers.strategies;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
