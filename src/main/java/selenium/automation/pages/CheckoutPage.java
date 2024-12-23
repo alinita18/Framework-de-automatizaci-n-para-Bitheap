@@ -1,13 +1,13 @@
 package selenium.automation.pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import selenium.automation.drivers.DriverSingleton;
 import selenium.automation.utils.Constants;
+import selenium.automation.utils.Log;
 
 import java.time.Duration;
 import java.util.List;
@@ -43,7 +43,7 @@ public class CheckoutPage {
     @FindBy(css = "#order_review > table > tfoot > tr.order-total > td > strong > span > bdi")
     private WebElement totalAmount;
 
-    @FindBy(id = "place_order")
+    @FindBy(xpath = "//*[@id=\"place_order\"]")
     private WebElement placeOrder;
 
     @FindBy(css = "#post-207 > header > h1")
@@ -82,6 +82,7 @@ public class CheckoutPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT));
         wait.until(ExpectedConditions.elementToBeClickable(placeOrder));
         placeOrder.click();
+
     }
 
     public String getOrderStatus(){

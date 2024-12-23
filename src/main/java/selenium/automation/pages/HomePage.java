@@ -1,13 +1,13 @@
 package selenium.automation.pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import selenium.automation.drivers.DriverSingleton;
 import selenium.automation.utils.Constants;
+import selenium.automation.utils.Log;
 
 import java.time.Duration;
 
@@ -31,6 +31,7 @@ public class HomePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.elementToBeClickable(signInButton));
         signInButton.click();
+
     }
 
     public void clickShopButton(){

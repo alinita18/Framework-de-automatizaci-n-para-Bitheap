@@ -12,6 +12,5 @@ import org.junit.runner.RunWith;
         features = "src/main/resources/features"
 )
 public class RunTests {
-   @Test
-    public void tests(){}
+
 }
