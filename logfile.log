@@ -173,3 +173,26 @@
 2024-12-20 18:03:29,456 INFO  [Log] Method "i_confirm_address_shipping_payment_and_final_order" has finished successfully. Checkout button has been clicked 
 2024-12-20 18:03:29,457 INFO  [Log] Starting "the_elements_are_bought" method 
 2024-12-20 18:03:29,474 INFO  [Log] Method "the_elements_are_bought" has finished successfully. Successful purchase 
+2024-12-23 17:38:20,309 INFO  [Log] Test called: Testing the autentication has started 
+2024-12-23 17:38:24,811 INFO  [Log] Navigating to https://bitheap.tech 
+2024-12-23 17:38:24,814 INFO  [Log] Starting "i_click_on_Sign_In_button" method 
+2024-12-23 17:38:24,963 INFO  [Log] Method "i_click_on_Sign_In_button" has finished successfully. Sign In button has been clicked 
+2024-12-23 17:38:24,964 INFO  [Log] Starting "i_specify_my_credentials_and_click_login" method 
+2024-12-23 17:38:25,363 INFO  [Log] Method "i_specify_my_credentials_and_click_login" has finished successfully. Login button has been clicked 
+2024-12-23 17:38:25,363 INFO  [Log] Starting "i_can_log_into_the_website" method 
+2024-12-23 17:38:30,568 INFO  [Log] Method " i_can_log_into_the_website" has finished successfully. Successful authentication 
+2024-12-23 17:38:30,916 INFO  [Log] Test called: Testing the purchase of one item has started 
+2024-12-23 17:38:32,297 INFO  [Log] Navigating to https://bitheap.tech 
+2024-12-23 17:38:32,298 INFO  [Log] Starting "i_add_one_element_to_the_cart" method 
+2024-12-23 17:38:33,822 INFO  [Log] Shop button clicked correctly 
+2024-12-23 17:38:35,233 INFO  [Log] Shop page scrolled successfully 
+2024-12-23 17:38:37,437 INFO  [Log] Method "i_add_one_element_to_the_cart" has finished successfully. Element added successfully to the cart 
+2024-12-23 17:38:37,438 INFO  [Log] Starting "i_proceed_to_checkout" method 
+2024-12-23 17:38:38,741 INFO  [Log] Cart button has been clicked 
+2024-12-23 17:38:40,539 INFO  [Log] Method "i_proceed_to_checkout" has finished successfully. Proceed to Checkout button has been clicked 
+2024-12-23 17:38:40,540 INFO  [Log] Starting "i_confirm_address_shipping_payment_and_final_order" method 
+2024-12-23 17:38:40,697 INFO  [Log] Address information sent successfully 
+2024-12-23 17:38:41,168 INFO  [Log] Personal information sent successfully 
+2024-12-23 17:38:41,785 INFO  [Log] Method "i_confirm_address_shipping_payment_and_final_order" has finished successfully. Checkout button has been clicked 
+2024-12-23 17:38:41,786 INFO  [Log] Starting "the_elements_are_bought" method 
+2024-12-23 17:38:41,804 INFO  [Log] Method "the_elements_are_bought" has finished successfully. Successful purchase 
